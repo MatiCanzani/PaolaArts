@@ -1,16 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactForm from "../components/ContactForm";
-import { getImage } from "astro:assets";
-import contactBkg from "../../public/contactBkg.avif"
-
-const optimizedBackground = await getImage({src: contactBkg, format: 'avif'})
-
 ---
 
 <Layout title="Get in touch">
   <section
-  style={`background-image: url(${optimizedBackground.src});`}
+  class="bg-[url('/contactBkg.avif')]"
   >
     <ContactForm />
   </section>
