@@ -1,0 +1,29 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+export const getStaticPaths = async () => {
+  const paints = await getCollection("paints");
+
+  const paths = paints.map(({ slug, data }) => {
+    return { params: { slug: slug }, props: { data } };
+  });
+  return paths;
+};
+
+const { data } = Astro.props;
+---
+
+<Layout title={data.title}>
+  <main class="w-11/12 md:max-w-screen-lg lg:max-w-7xl mx-auto z-50 absolute">
+    <div class="md:max-w-lg min-h-full px-10 py-16">
+      <Image
+        src={data.img}
+        alt={data.altImg}
+        class="rounded-lg h-full object-cover max-h-max"
+      />
+      <h2 class="font-abril text-4xl mt-7">{data.title}</h2>
+    </div>
+  </main>
+</Layout>
