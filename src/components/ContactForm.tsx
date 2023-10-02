@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react";
 
 export default function Form() {
   const [responseMessage, setResponseMessage] = useState("");
@@ -17,7 +17,7 @@ export default function Form() {
   }
 
   return (
-    <form onSubmit={submit}>
+    <form data-netlify="true" onSubmit={submit}>
       <label htmlFor="name">
         Name
         <input type="text" id="name" name="name" autoComplete="name" required />
