@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify/functions';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  output: 'server',
+  // output: 'server',
   adapter: netlify(),
   image: {
     remotePatterns: [{ protocol: "https" }],
