@@ -17,7 +17,6 @@ export default function Form() {
   }
 
   return (
-    <section className="bg-[url('src/images/dark-concrete-texture-background_24837-397.avif')]">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight text-center text-[#f0eeea] font-abril">
           Get in touch
@@ -80,6 +79,5 @@ export default function Form() {
           {responseMessage && <p>{responseMessage}</p>}
         </form>
       </div>
-    </section>
   );
 }
