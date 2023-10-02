@@ -1,5 +1,4 @@
 import { type FormEvent, useState } from "react";
-import { Background } from "../images/dark-concrete-texture-background_24837-397.avif";
 
 export default function Form() {
   const [responseMessage, setResponseMessage] = useState("");
