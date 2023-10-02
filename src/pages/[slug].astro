@@ -3,6 +3,8 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
+export const prerender = true;
+
 export const getStaticPaths = async () => {
   const paints = await getCollection("paints");
 
