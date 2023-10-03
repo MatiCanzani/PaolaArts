@@ -2,8 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import react from '@astrojs/react';
 import vercelServerless from '@astrojs/vercel/serverless';
-
-// import netlify from "@astrojs/netlify/functions";pnpm astro add vercel
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,5 +14,5 @@ export default defineConfig({
       protocol: "https"
     }]
   },
-  // adapter: netlify()
+  adapter: netlify()
 });
