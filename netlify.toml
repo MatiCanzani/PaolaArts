@@ -1,2 +1,6 @@
 [functions]
   node_bundler = "none"
+
+[build]
+  command = "pnpm run build"
+  publish = "dist"
