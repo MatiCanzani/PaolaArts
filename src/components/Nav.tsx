@@ -50,7 +50,7 @@ export default function Nav() {
         <a href="/">Home</a>
         <a href="/about">About me </a>
         <a href="/arts">Arts</a>
-        <a href="/arts">Contact</a>
+        <a href="/contact">Contact</a>
       </div>
 
       <motion.div
@@ -107,14 +107,14 @@ export default function Nav() {
               About me
             </motion.a>
             <motion.a
-              href="/arts"
+              href="/about"
               variants={itemMotion}
               className="p-2 m-0 font-space"
             >
               Arts
             </motion.a>
             <motion.a
-              href="/arts"
+              href="/contact"
               variants={itemMotion}
               className="p-2 m-0 font-space"
             >
