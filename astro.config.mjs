@@ -1,18 +1,19 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import react from '@astrojs/react';
-import netlify from "@astrojs/netlify/functions";
+import vercelServerless from '@astrojs/vercel/serverless';
 
-import vercel from "@astrojs/vercel/serverless";
+// import netlify from "@astrojs/netlify/functions";pnpm astro add vercel
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: 'server',
+  adapter: vercelServerless(),
   image: {
     remotePatterns: [{
       protocol: "https"
     }]
   },
-  adapter: vercel()
+  // adapter: netlify()
 });
